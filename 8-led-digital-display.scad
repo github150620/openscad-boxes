@@ -12,7 +12,7 @@ nut_outside_daimeter = 5.0;
 nut_height = box_inside_depth - 9;
 
 nut_x_distance = 76.0;
-nux_y_distance = 9.0;
+nut_y_distance = 9.0;
 
 translate([0,0,0.5]){
     cube([box_inside_width + 2 * shell_thickness, box_inside_height + 2 * shell_thickness, shell_thickness], center=true);
@@ -26,7 +26,7 @@ translate([0,0,1]){
         }
     }
 
-    for(y = [-nux_y_distance/2,nux_y_distance/2]) {
+    for(y = [-nut_y_distance/2,nut_y_distance/2]) {
         for (x = [-nut_x_distance/2, nut_x_distance/2]) {
             translate([x, y, nut_height/2]) {
                 difference() {
